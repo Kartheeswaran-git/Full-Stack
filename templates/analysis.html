@@ -1,0 +1,200 @@
+{% extends "base.html" %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.min.css">
+<style>
+    .chart-container {
+        position: relative;
+        height: 400px;
+        width: 100%;
+        margin: 20px 0;
+    }
+    
+    .chart-loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        color: #7f8c8d;
+        font-style: italic;
+    }
+    
+    .chart-error {
+        color: #e74c3c;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .attendance-rates {
+        margin-top: 30px;
+    }
+    
+    .attendance-rate-item {
+        margin-bottom: 15px;
+    }
+    
+    .progress-container {
+        height: 25px;
+        background-color: #f1f1f1;
+        border-radius: 4px;
+        position: relative;
+        margin-top: 5px;
+    }
+    
+    .progress-bar {
+        height: 100%;
+        border-radius: 4px;
+        background-color: #3498db;
+        position: absolute;
+    }
+    
+    .progress-text {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-weight: bold;
+        font-size: 0.8em;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="analysis-section">
+    <div class="card full-width">
+        <h2>Attendance Trends</h2>
+        <div class="chart-container">
+            <div id="trend-chart-loading" class="chart-loading">Loading attendance data...</div>
+            <canvas id="attendance-trend-chart"></canvas>
+        </div>
+    </div>
+
+    <div class="card full-width">
+        <h2>Student Attendance Rates</h2>
+        <div class="attendance-rates">
+            {% for student in student_data %}
+            <div class="attendance-rate-item">
+                <div class="student-info">
+                    <strong>{{ student.name }}</strong> (ID: {{ student.id }})
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: {{ student.attendance_rate }}%"></div>
+                    <span class="progress-text">{{ student.attendance_rate }}%</span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="card full-width">
+        <h2>AI Insights</h2>
+        <div id="ai-insights">
+            <div class="loading-state">
+                <div class="spinner"></div>
+                <p>Loading AI insights...</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize attendance trends chart
+    const ctx = document.getElementById('attendance-trend-chart');
+    const loadingElement = document.getElementById('trend-chart-loading');
+    
+    fetch('/api/attendance/trends')
+        .then(response => {
+            if (!response.ok) throw new Error('Network response was not ok');
+            return response.json();
+        })
+        .then(data => {
+            loadingElement.style.display = 'none';
+            
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: data.labels,
+                    datasets: data.datasets
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Daily Attendance Trend'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Number of Students Present'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Date'
+                            }
+                        }
+                    }
+                }
+            });
+        })
+        .catch(error => {
+            loadingElement.innerHTML = `<div class="chart-error">Failed to load attendance data: ${error.message}</div>`;
+            console.error('Error loading attendance trends:', error);
+        });
+
+    // Load AI insights
+    fetch('/ai/trends')
+        .then(response => {
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            return response.json();
+        })
+        .then(data => {
+            const insightsContainer = document.getElementById('ai-insights');
+            insightsContainer.innerHTML = `
+                <div class="insights-content">
+                    <h3>Weekly Patterns</h3>
+                    <div class="trends-chart">
+                        ${data.trends.map(trend => `
+                            <div class="trend-row">
+                                <span class="day">${trend.day}</span>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: ${trend.absence_rate * 100}%"></div>
+                                    <span class="percentage">${Math.round(trend.absence_rate * 100)}%</span>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                    <div class="key-insights">
+                        <h4>Key Observations</h4>
+                        <ul>
+                            ${data.insights.map(insight => `<li>${insight}</li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
+            `;
+        })
+        .catch(error => {
+            document.getElementById('ai-insights').innerHTML = `
+                <div class="error-state">
+                    <div class="error-icon">!</div>
+                    <h3>Analysis Unavailable</h3>
+                    <p>${error.message}</p>
+                    <button onclick="window.location.reload()" class="retry-btn">Retry</button>
+                </div>
+            `;
+            console.error('Error loading AI insights:', error);
+        });
+});
+</script>
+{% endblock %}

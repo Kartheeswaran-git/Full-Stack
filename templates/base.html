@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Attendance System{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>{% block header %}Attendance Tracking System{% endblock %}</h1>
+            <nav>
+                <ul>
+                    <li {% if request.path == url_for('index') %}class="active"{% endif %}>
+                        <a href="{{ url_for('index') }}">Dashboard</a>
+                    </li>
+                    <li {% if request.path == url_for('students') %}class="active"{% endif %}>
+                        <a href="{{ url_for('students') }}">Students</a>
+                    </li>
+                    <li {% if request.path == url_for('attendance') %}class="active"{% endif %}>
+                        <a href="{{ url_for('attendance') }}">Attendance</a>
+                    </li>
+                    <li {% if request.path == url_for('analysis') %}class="active"{% endif %}>
+                        <a href="{{ url_for('analysis') }}">Analysis</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+
+        <footer>
+            <p>AI-Powered Attendance System &copy; {{ current_year }}</p>
+        </footer>
+    </div>
+
+    {% block scripts %}{% endblock %}
+</body>
+</html>

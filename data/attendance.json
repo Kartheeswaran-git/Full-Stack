@@ -1,0 +1,362 @@
+[
+  {
+    "date": "2023-11-01",
+    "student_id": 1,
+    "status": "present",
+    "timestamp": "2023-11-01T09:15:00"
+  },
+  {
+    "date": "2023-11-01",
+    "student_id": 2,
+    "status": "absent",
+    "timestamp": "2023-11-01T09:15:00"
+  },
+  {
+    "date": "2025-08-12",
+    "student_id": 2,
+    "status": "present",
+    "timestamp": "2025-08-12T09:04:52.576173"
+  },
+  {
+    "date": "2025-08-12",
+    "student_id": 3,
+    "status": "present",
+    "timestamp": "2025-08-12T09:04:53.139113"
+  },
+  {
+    "date": "2025-08-12",
+    "student_id": 4,
+    "status": "present",
+    "timestamp": "2025-08-12T09:04:54.558286"
+  },
+  {
+    "date": "2025-08-12",
+    "student_id": 5,
+    "status": "present",
+    "timestamp": "2025-08-12T09:04:58.187952"
+  },
+  {
+    "date": "2025-08-12",
+    "student_id": 6,
+    "status": "present",
+    "timestamp": "2025-08-12T09:05:00.863088"
+  },
+  {
+    "date": "2025-08-12",
+    "student_id": 7,
+    "status": "present",
+    "timestamp": "2025-08-12T09:05:01.725548"
+  },
+  {
+    "date": "2025-08-12",
+    "student_id": 8,
+    "status": "absent",
+    "timestamp": "2025-08-12T09:05:27.029875"
+  },
+  {
+    "date": "2025-08-01",
+    "student_id": 1,
+    "status": "present",
+    "timestamp": "2025-08-12T09:25:18.297551"
+  },
+  {
+    "date": "2025-08-01",
+    "student_id": 2,
+    "status": "absent",
+    "timestamp": "2025-08-12T09:25:19.197192"
+  },
+  {
+    "date": "2025-08-01",
+    "student_id": 3,
+    "status": "present",
+    "timestamp": "2025-08-12T09:25:19.850523"
+  },
+  {
+    "date": "2025-08-01",
+    "student_id": 4,
+    "status": "absent",
+    "timestamp": "2025-08-12T09:25:20.741705"
+  },
+  {
+    "date": "2025-08-01",
+    "student_id": 5,
+    "status": "present",
+    "timestamp": "2025-08-12T09:25:22.336521"
+  },
+  {
+    "date": "2025-08-01",
+    "student_id": 6,
+    "status": "present",
+    "timestamp": "2025-08-12T09:25:22.912877"
+  },
+  {
+    "date": "2025-08-01",
+    "student_id": 7,
+    "status": "present",
+    "timestamp": "2025-08-12T09:25:23.399532"
+  },
+  {
+    "date": "2025-08-01",
+    "student_id": 8,
+    "status": "present",
+    "timestamp": "2025-08-12T09:25:24.019300"
+  },
+  {
+    "date": "2025-08-11",
+    "student_id": 2,
+    "status": "present",
+    "timestamp": "2025-08-12T09:26:00.303845"
+  },
+  {
+    "date": "2025-08-11",
+    "student_id": 3,
+    "status": "present",
+    "timestamp": "2025-08-12T09:26:01.311965"
+  },
+  {
+    "date": "2025-08-11",
+    "student_id": 4,
+    "status": "present",
+    "timestamp": "2025-08-12T09:26:02.171319"
+  },
+  {
+    "date": "2025-08-11",
+    "student_id": 5,
+    "status": "absent",
+    "timestamp": "2025-08-12T09:26:02.891746"
+  },
+  {
+    "date": "2025-08-11",
+    "student_id": 6,
+    "status": "present",
+    "timestamp": "2025-08-12T09:26:04.266485"
+  },
+  {
+    "date": "2025-08-11",
+    "student_id": 7,
+    "status": "present",
+    "timestamp": "2025-08-12T09:26:04.832693"
+  },
+  {
+    "date": "2025-08-11",
+    "student_id": 8,
+    "status": "present",
+    "timestamp": "2025-08-12T09:26:05.341774"
+  },
+  {
+    "date": "2025-08-10",
+    "student_id": 2,
+    "status": "present",
+    "timestamp": "2025-08-12T09:26:10.139411"
+  },
+  {
+    "date": "2025-08-10",
+    "student_id": 3,
+    "status": "present",
+    "timestamp": "2025-08-12T09:26:10.699988"
+  },
+  {
+    "date": "2025-08-10",
+    "student_id": 4,
+    "status": "present",
+    "timestamp": "2025-08-12T09:26:11.268444"
+  },
+  {
+    "date": "2025-08-10",
+    "student_id": 5,
+    "status": "absent",
+    "timestamp": "2025-08-12T09:26:11.944704"
+  },
+  {
+    "date": "2025-08-10",
+    "student_id": 6,
+    "status": "absent",
+    "timestamp": "2025-08-12T09:26:12.757374"
+  },
+  {
+    "date": "2025-08-10",
+    "student_id": 7,
+    "status": "present",
+    "timestamp": "2025-08-12T09:26:14.001690"
+  },
+  {
+    "date": "2025-08-10",
+    "student_id": 8,
+    "status": "present",
+    "timestamp": "2025-08-12T09:26:15.136743"
+  },
+  {
+    "date": "2025-08-09",
+    "student_id": 1,
+    "status": "present",
+    "timestamp": "2025-08-12T09:26:19.717945"
+  },
+  {
+    "date": "2025-08-09",
+    "student_id": 2,
+    "status": "present",
+    "timestamp": "2025-08-12T09:26:20.239087"
+  },
+  {
+    "date": "2025-08-09",
+    "student_id": 3,
+    "status": "absent",
+    "timestamp": "2025-08-12T09:26:21.094610"
+  },
+  {
+    "date": "2025-08-09",
+    "student_id": 4,
+    "status": "present",
+    "timestamp": "2025-08-12T09:26:22.154857"
+  },
+  {
+    "date": "2025-08-09",
+    "student_id": 5,
+    "status": "absent",
+    "timestamp": "2025-08-12T09:26:22.795351"
+  },
+  {
+    "date": "2025-08-09",
+    "student_id": 6,
+    "status": "present",
+    "timestamp": "2025-08-12T09:26:23.321498"
+  },
+  {
+    "date": "2025-08-09",
+    "student_id": 7,
+    "status": "present",
+    "timestamp": "2025-08-12T09:26:24.546648"
+  },
+  {
+    "date": "2025-08-09",
+    "student_id": 8,
+    "status": "present",
+    "timestamp": "2025-08-12T09:26:25.042579"
+  },
+  {
+    "date": "2025-08-08",
+    "student_id": 1,
+    "status": "present",
+    "timestamp": "2025-08-12T09:26:30.442245"
+  },
+  {
+    "date": "2025-08-08",
+    "student_id": 2,
+    "status": "absent",
+    "timestamp": "2025-08-12T09:26:32.586284"
+  },
+  {
+    "date": "2025-08-08",
+    "student_id": 3,
+    "status": "present",
+    "timestamp": "2025-08-12T09:26:33.321817"
+  },
+  {
+    "date": "2025-08-08",
+    "student_id": 4,
+    "status": "absent",
+    "timestamp": "2025-08-12T09:26:34.552154"
+  },
+  {
+    "date": "2025-08-08",
+    "student_id": 5,
+    "status": "present",
+    "timestamp": "2025-08-12T09:26:35.174907"
+  },
+  {
+    "date": "2025-08-08",
+    "student_id": 6,
+    "status": "absent",
+    "timestamp": "2025-08-12T09:26:36.635459"
+  },
+  {
+    "date": "2025-08-08",
+    "student_id": 7,
+    "status": "present",
+    "timestamp": "2025-08-12T09:26:37.429675"
+  },
+  {
+    "date": "2025-08-08",
+    "student_id": 8,
+    "status": "present",
+    "timestamp": "2025-08-12T09:26:38.685627"
+  },
+  {
+    "date": "2025-08-02",
+    "student_id": 2,
+    "status": "present",
+    "timestamp": "2025-08-12T09:28:27.364509"
+  },
+  {
+    "date": "2025-08-02",
+    "student_id": 3,
+    "status": "present",
+    "timestamp": "2025-08-12T09:28:28.413395"
+  },
+  {
+    "date": "2025-08-02",
+    "student_id": 4,
+    "status": "absent",
+    "timestamp": "2025-08-12T09:28:28.976077"
+  },
+  {
+    "date": "2025-08-02",
+    "student_id": 5,
+    "status": "present",
+    "timestamp": "2025-08-12T09:28:29.504253"
+  },
+  {
+    "date": "2025-08-02",
+    "student_id": 6,
+    "status": "present",
+    "timestamp": "2025-08-12T09:28:30.113758"
+  },
+  {
+    "date": "2025-08-02",
+    "student_id": 7,
+    "status": "present",
+    "timestamp": "2025-08-12T09:28:31.503292"
+  },
+  {
+    "date": "2025-08-02",
+    "student_id": 8,
+    "status": "absent",
+    "timestamp": "2025-08-12T09:28:32.263977"
+  },
+  {
+    "date": "2025-08-02",
+    "student_id": 1,
+    "status": "present",
+    "timestamp": "2025-08-12T09:28:46.293703"
+  },
+  {
+    "date": "2025-08-12",
+    "student_id": 9,
+    "status": "present",
+    "timestamp": "2025-08-12T09:36:37.012285"
+  },
+  {
+    "date": "2025-08-11",
+    "student_id": 9,
+    "status": "absent",
+    "timestamp": "2025-08-12T09:36:48.895463"
+  },
+  {
+    "date": "2025-08-12",
+    "student_id": 1,
+    "status": "present",
+    "timestamp": "2025-08-12T09:37:55.883115"
+  },
+  {
+    "date": "2025-08-11",
+    "student_id": 1,
+    "status": "present",
+    "timestamp": "2025-08-12T09:37:59.900454"
+  },
+  {
+    "date": "2025-08-10",
+    "student_id": 1,
+    "status": "present",
+    "timestamp": "2025-08-12T09:38:02.949842"
+  }
+]

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="dashboard-grid">
+    <!-- Card 1 -->
+    <div class="card primary">
+        <h2>Total Students</h2>
+        <div class="value">{{ total_students }}</div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card secondary">
+        <h2>Present Today</h2>
+        <div class="value">{{ present_today }}</div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card accent">
+        <h2>Weekly Attendance</h2>
+        <div class="value">{{ weekly_rate }}%</div>
+    </div>
+
+    <!-- Recent Activity -->
+    <div class="card full-width">
+        <h2>Recent Activity</h2>
+        <div class="recent-activity">
+            <div class="activity-item">
+                <span class="time">Today</span>
+                <span class="action">System initialized</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="card full-width">
+        <h2>Quick Actions</h2>
+        <div class="quick-actions">
+            <a href="{{ url_for('attendance') }}" class="btn">Mark Today's Attendance</a>
+            <a href="{{ url_for('students') }}" class="btn">Add New Student</a>
+            <a href="{{ url_for('analysis') }}" class="btn">View Reports</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "email": "john@example.com",
+    "class": "Grade 10A"
+  },
+  {
+    "id": 2,
+    "name": "Jane Smith",
+    "email": "jane@example.com",
+    "class": "Grade 10B"
+  },
+  {
+    "id": 3,
+    "name": "Mike Johnson",
+    "email": "mike@example.com",
+    "class": "Grade 11A"
+  },
+  {
+    "id": 4,
+    "name": "1",
+    "email": "1@g.in",
+    "class": "1"
+  },
+  {
+    "id": 5,
+    "name": "2",
+    "email": "cscsrfsf@gmail.com",
+    "class": "3"
+  },
+  {
+    "id": 6,
+    "name": "Jane Smith",
+    "email": "cscsrfsf@gmail.com",
+    "class": "3"
+  },
+  {
+    "id": 7,
+    "name": "karthikeyan",
+    "email": "sh@gmail.com",
+    "class": "12"
+  },
+  {
+    "id": 8,
+    "name": "karthikeyan s",
+    "email": "jane@example.com",
+    "class": "12"
+  },
+  {
+    "id": 9,
+    "name": "kartheeswaran",
+    "email": "cscsrfsf@gmail.com",
+    "class": "3"
+  }
+]

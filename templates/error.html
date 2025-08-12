@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="error-container">
+    <div class="card error-card">
+        <h2>Error Occurred</h2>
+        <div class="error-message">
+            {{ error_message }}
+        </div>
+        <div class="error-actions">
+            <a href="{{ url_for('index') }}" class="btn">Home</a>
+            <a href="{{ url_for('attendance') }}" class="btn">Attendance</a>
+            <button onclick="window.history.back()" class="btn">Go Back</button>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block styles %}
+<style>
+.error-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    padding: 20px;
+}
+.error-card {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+.error-message {
+    color: #e74c3c;
+    margin: 20px 0;
+    padding: 15px;
+    background: #fde8e8;
+    border-radius: 4px;
+    font-size: 1.1em;
+}
+.error-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+.error-actions .btn {
+    margin: 5px;
+}
+</style>
+{% endblock %}
